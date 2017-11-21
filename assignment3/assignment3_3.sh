@@ -19,8 +19,10 @@ traverse()
     if [ -d "$1/$i" ]; then
       echo "Directory: $1/$i"
       traverse "$1/$i" `expr $2 + 1`
+    elif [[ $(file --mime-encoding "$1/$i" | awk '{print $2}') == "binary" ]]; then 
+      echo "File $1/$i"
     else 
-      echo "File "$1/$i" has $(wc -l $1/$i | awk '{print $1}') lines"
+	echo "File "$1/$i" has $(wc -l $1/$i | awk '{print $1}') lines"
     fi
   done
 }
