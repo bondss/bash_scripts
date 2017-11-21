@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Find path to /etc/resolv.conf
+# Set path to /etc/resolv.conf
 nameServFile=/etc/resolv.conf
 
 # Using "awk" utility and pattern "nameserver" at the beginning of line -> pass the result to "wc" utility and calculate count
