@@ -10,7 +10,7 @@ if [ $income -lt 5000 ]; then
 elif [[ $income -ge 5000 && $income -le 30000 ]]; then
     let "tax=$income/10"; echo "Your tax is: $tax"
 else 
-   let "tax=$income*2/10"; echo "Your tax is: $tax"
+   let "tax=$income/5"; echo "Your tax is: $tax"
 fi
 
 exit 0
